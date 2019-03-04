@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+cupSize: F
+girl:
+    cupsize: B
+    age: 18
+
+
+girl.cupsize: C
+
+info:
+  address: USA
+  company: Spring
+  degree: high

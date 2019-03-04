@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dbgirl
+    username: root
+    password: root
+  jpa:
+    hibernate:
+#      ddl-auto: validate              #验证类里面的属性与表结构是否一致，不一致报错
+#      ddl-auto: none                  #默认不做任何操作
+#      ddl-auto: create-drop           #应用停下时删除表
+      ddl-auto: update                #只有第一次运行创建表，以后不再创建表，只更新数据
+#      ddl-auto: create                #每次都会删除原来的表再创建新的表，容易造成数据丢失
+    show-sql: true                    #控制台输出sql语句
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
